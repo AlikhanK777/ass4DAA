@@ -4,26 +4,26 @@ This project implements advanced graph algorithms for optimizing task scheduling
 Assignment Goals
 Consolidate two course topics in one practical case:
 1. Strongly Connected Components (SCC) & Topological Ordering
-2. Shortest Paths in Directed Acyclic Graphs (DAGs)
+2. Shortest Paths** in Directed Acyclic Graphs (DAGs)
 
- Implemented Algorithms
+Implemented Algorithms
 
  1. Strongly Connected Components (SCC)
 - Algorithm: Tarjan's DFS-based approach
 - Purpose: Detect and compress cyclic dependencies in task graphs
-- Feature:
+- Features:
   - Finds all SCCs in directed graphs
   - Builds condensation graph (DAG of components)
   - Returns component sizes and lists
 
  2. Topological Sorting
-- **Algorithm**: Kahn's BFS-based approach  
-- **Purpose**: Linear ordering of tasks in DAG
-- **Features**:
+- Algorithm: Kahn's BFS-based approach  
+- Purpose: Linear ordering of tasks in DAG
+- Features:
   - Valid execution order of components
   - Derived order of original tasks after SCC compression
 
-  3. Shortest/Longest Paths in DAG
+ 3. Shortest/Longest Paths in DAG
 - Algorithm: Dynamic programming over topological order
 - Purpose: Find optimal task execution paths
 - Features:
@@ -32,6 +32,7 @@ Consolidate two course topics in one practical case:
   - Path reconstruction for optimal routes
 
  Project Structure
+
 
  ass4DAA/
 ├── src/
@@ -44,43 +45,49 @@ Consolidate two course topics in one practical case:
 │ │ └── model/GraphData.java # Data model classes
 │ └── test/java/graph/
 │ └── scc/SCCTest.java # JUnit tests
-├── data/
-│ └── tasks.json # Sample dataset
+├── src/data/
+│ ├── small_1.json, small_2.json, small_3.json
+│ ├── medium_1.json, medium_2.json, medium_3.json
+│ └── large_1.json, large_2.json, large_3.json
 └── pom.xml # Maven configuration
 
 
-Performance Metrics
+
+ Performance Metrics
 The system includes comprehensive instrumentation:
 
-SCC Metrics: DFS visits, edges traversed, execution time
-Topological Sort: Queue operations (pushes/pops), timing
-Path Algorithms: Relaxation steps, computation time
-Memory Usage: Efficient data structures
+- SCC Metrics: DFS visits, edges traversed, execution time
+- Topological Sort Queue operations (pushes/pops), timing
+- Path Algorithms: Relaxation steps, computation time
+- Memory Usage: Efficient data structures
 
-Testing Strategy
-Unit Tests
+ Testing Strategy
 
-SCC on cyclic graphs and DAGs
-Topological sort correctness
-Path reconstruction validation
-Edge case handling
+ Unit Tests
+- SCC on cyclic graphs and DAGs
+- Topological sort correctness
+- Path reconstruction validation
+- Edge case handling
 
-Test Datasets
-Small graphs (6-10 nodes): Basic functionality
-Medium graphs (10-20 nodes): Mixed structures
-Large graphs (20-50 nodes): Performance testing
+ Test Datasets
+- Small graphs (6-10 nodes): Basic functionality
+- Medium graphs (10-20 nodes): Mixed structures  
+- Large graphs (20-50 nodes): Performance testing
 
-Customization
-Extending the Project
+ Customization
 
-Add new graph algorithms in respective packages
-Create custom dataset generators
-Implement additional metrics
-Extend with visualization components
+ Extending the Project
+- Add new graph algorithms in respective packages
+- Create custom dataset generators
+- Implement additional metrics
+- Extend with visualization components
 
-Configuration
-Weight models: Edge-based or node duration
-Metrics granularity: Fine-grained performance tracking
-Output formats: JSON, CSV, or visual reports
+ Configuration
+- Weight models: Edge-based or node duration
+- Metrics granularity: Fine-grained performance tracking
+- Output formats: JSON, CSV, or visual reports
 
-Student: Kenzhebek Alikhan 
+
+Student : Kenzhebek Alikhan  
+
+
