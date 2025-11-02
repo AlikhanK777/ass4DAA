@@ -31,28 +31,6 @@ Implemented Algorithms
   - Longest path finding (critical path analysis)
   - Path reconstruction for optimal routes
 
- Project Structure
-
-
- ass4DAA/
-├── src/
-│ ├── main/java/graph/
-│ │ ├── Main.java # Main application entry point
-│ │ ├── Metrics.java # Performance metrics collector
-│ │ ├── scc/SCC.java # Tarjan's SCC implementation
-│ │ ├── topo/TopologicalSort.java # Kahn's topological sort
-│ │ ├── dagsp/DAGShortestPath.java # Path algorithms
-│ │ └── model/GraphData.java # Data model classes
-│ └── test/java/graph/
-│ └── scc/SCCTest.java # JUnit tests
-├── src/data/
-│ ├── small_1.json, small_2.json, small_3.json
-│ ├── medium_1.json, medium_2.json, medium_3.json
-│ └── large_1.json, large_2.json, large_3.json
-└── pom.xml # Maven configuration
-
-
-
  Performance Metrics
 The system includes comprehensive instrumentation:
 
